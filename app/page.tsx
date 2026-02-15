@@ -5,6 +5,7 @@ import { Projects } from "@/components/projects"
 import { Skills } from "@/components/skills"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { SectionFade } from "@/components/section-fade"
 
 export default function Page() {
   return (
@@ -12,10 +13,18 @@ export default function Page() {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
+        <SectionFade>
+          <About />
+        </SectionFade>
+        <SectionFade>
+          <Projects />
+        </SectionFade>
+        <SectionFade>
+          <Skills />
+        </SectionFade>
+        <SectionFade>
+          <Contact />
+        </SectionFade>
       </main>
       <Footer />
     </>

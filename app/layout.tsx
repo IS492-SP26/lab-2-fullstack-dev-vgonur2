@@ -14,13 +14,13 @@ const _outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  title: 'Sarah Johnson | Web Developer & Designer',
+  title: 'Vishruth Gonur | CS Student & AI/Technology Enthusiast',
   description:
-    'I create beautiful, functional websites that help businesses grow. Explore my portfolio and get in touch.',
+    "Computer Science student passionate about Generative AI, data-driven problem solving, and building impactful technology solutions. Explore my portfolio and connect.",
 }
 
 export const viewport: Viewport = {
-  themeColor: '#1a6fbd',
+  themeColor: '#4f46e5',
 }
 
 export default function RootLayout({

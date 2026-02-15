@@ -125,13 +125,13 @@ export function Contact() {
   }
 
   return (
-    <section id="feedback" className="bg-background py-20 md:py-28">
+    <section id="feedback" className="scroll-mt-20 bg-background py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 text-center">
           <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Feedback
           </h2>
-          <div className="mx-auto mt-3 h-1 w-12 rounded-full bg-primary" />
+          <div className="mx-auto mt-3 h-1 w-12 rounded-full bg-indigo-500" />
           <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
             Share your thoughts or suggestions. Your feedback helps improve this site.
           </p>

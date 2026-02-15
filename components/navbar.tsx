@@ -31,9 +31,11 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
           href="#"
-          className="font-heading text-xl font-bold tracking-tight text-foreground"
+          className={`font-heading text-xl font-bold tracking-tight transition-opacity hover:opacity-90 ${
+            isScrolled ? "text-foreground" : "text-white"
+          }`}
         >
-          Sarah<span className="text-primary">.</span>
+          Vishruth Gonur
         </a>
 
         {/* Desktop links */}
@@ -42,7 +44,11 @@ export function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                className={`text-sm font-medium transition-all duration-200 hover:scale-105 ${
+                  isScrolled
+                    ? "text-muted-foreground hover:text-primary"
+                    : "text-slate-300 hover:text-white"
+                }`}
               >
                 {link.label}
               </a>
@@ -53,7 +59,9 @@ export function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="inline-flex items-center justify-center rounded-md p-2 text-foreground md:hidden"
+          className={`inline-flex items-center justify-center rounded-md p-2 md:hidden ${
+            isScrolled ? "text-foreground" : "text-white"
+          }`}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -69,7 +77,7 @@ export function Navbar() {
                 <a
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-primary"
+                  className="block rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors duration-200 hover:bg-muted hover:text-primary"
                 >
                   {link.label}
                 </a>
